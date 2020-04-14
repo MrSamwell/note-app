@@ -4,3 +4,12 @@ Cada ferramenta possui um atalho no teclado;
 O usuario pode salvar o documento em um arquivo de texto.
 O usuário pode excluir o documento através de um botão na janela.
 O usuário pode alternar entre tema light e dark.
+
+
+
+
+A fazer 
+	Corrigir responsividade (altura) (elementos se unindo em dispositivos mais baixos);
+	Adicionar novas ferramentas;
+	Permitir tab;
+	voltar o focus pra textarea após clicar uma ferramenta;
