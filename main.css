@@ -48,7 +48,7 @@ body{
     padding: 20px;
     box-sizing: border-box;
     width: 94%;
-    height: 82%;
+    height: 67%;
     margin: 45px auto 0 auto;
     border-radius: 10px;
     background-color: var(--textareabg);
@@ -61,7 +61,7 @@ body{
 .menu{
     position: fixed;
     bottom: 0;
-    height: 50px;
+    height: 22%;
     width: 100%;
     background-color: var(--textareabg);
     
@@ -82,8 +82,8 @@ body{
 
 .menu ul li svg{
     fill: var(--fontcolor);
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
 }
 
 .menu ul li button{
@@ -94,6 +94,14 @@ body{
     display:none
 }
 
+@media only screen and (min-width: 450px){
+    .menu{
+        height: 100px;
+    }
+    .textarea{
+        height: 75%;
+    }
+}
 
 @media only screen and (min-width: 1000px){
     /* The switch - the box around the slider */
@@ -162,8 +170,9 @@ body{
   }
 
     .textarea{
+        white-space: pre;
         width: 60%;
-        height: 80%;
+        height: 70%;
         padding: 50px 50px 0 50px;
         font-size: 1.2em;
         transition: 0.3s;
@@ -173,6 +182,7 @@ body{
         display: none;
     }
     .menu{
+        height: 100px;
         width: 60%;
         margin: 0 20%;
         bottom: 5%;

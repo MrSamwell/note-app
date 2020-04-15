@@ -1,4 +1,68 @@
+var hlcolor = '#4db082';
 
+function executaComando(){
+   
+    if(arguments.length == 1){
+    document.execCommand(arguments[0], false, null);
+}
+    if(arguments.length == 3){
+        document.execCommand(arguments[0], arguments[1], arguments[2]);
+
+
+        let a = arguments[0];
+        trocaCorHl(a);
+        
+    }
+
+    let p = document.getElementById('textarea');
+    let s = window.getSelection();
+    let r = document.createRange();
+    r.setStart(p, p.childElementCount);
+    r.setEnd(p, p.childElementCount);
+    s.removeAllRanges();
+    s.addRange(r);
+    
+    
+    
+}
+
+function trocaCorHl(a){
+    
+            if (a == 'HiliteColor' && this.hlcolor == '#4db082'){
+                this.hlcolor = 'transparent';
+                
+                
+                
+            } else 
+            if(a == 'HiliteColor' && this.hlcolor == 'transparent'){
+                this.hlcolor = '#4db082';
+               
+                
+            }
+
+          
+
+          
+}
+
+
+function permiteTab(){
+   /* if(event.keyCode == 9){
+        event.preventDefault();
+        var range = window.getSelection().getRangeAt(0);
+ 
+        var tabNode = document.createTextNode("\u00a0\u00a0\u00a0\u00a0");
+        range.insertNode(tabNode);
+ 
+        range.setStartAfter(tabNode);
+        range.setEndAfter(tabNode);
+    }
+    */
+   if(event.keyCode == 9){
+       event.preventDefault();
+       document.execCommand('indent', false, null);
+   }
+}
 
 function mudaTema(){
     let root =document.querySelector('body');

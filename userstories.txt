@@ -13,3 +13,4 @@ A fazer
 	Adicionar novas ferramentas;
 	Permitir tab;
 	voltar o focus pra textarea após clicar uma ferramenta;
+	Adicionar fontes e tamanhos;
