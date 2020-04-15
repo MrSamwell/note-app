@@ -48,7 +48,7 @@ body{
     padding: 20px;
     box-sizing: border-box;
     width: 94%;
-    height: 80%;
+    height: 82%;
     margin: 45px auto 0 auto;
     border-radius: 10px;
     background-color: var(--textareabg);
@@ -61,7 +61,7 @@ body{
 .menu{
     position: fixed;
     bottom: 0;
-    height: 10%;
+    height: 8%;
     width: 100%;
     background-color: var(--textareabg);
     
@@ -82,8 +82,8 @@ body{
 
 .menu ul li svg{
     fill: var(--fontcolor);
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
 }
 
 .menu ul li button{
@@ -93,18 +93,26 @@ body{
 .switch{
     display:none
 }
+@media only screen and (max-width:350px){
+    .menu ul li{
+       
+        margin: 0 1%;
+        
+    }
+    
+}
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 558px){
     .menu{
         height: 50px;
     }
     .menu ul li{
        
-        margin: 0 5%;
+        margin: 0 4%;
         
     }
     .textarea{
-        height: 80%;
+        height: 85%;
     }
 }
 
