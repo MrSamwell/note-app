@@ -61,7 +61,7 @@ body{
 .menu{
     position: fixed;
     bottom: 0;
-    height: 12%;
+    height: 10%;
     width: 100%;
     background-color: var(--textareabg);
     
@@ -76,7 +76,7 @@ body{
 
 .menu ul li{
     display: inline-block;
-    margin: 0 5%;
+    margin: 0 1%;
     line-height: 40px;
 }
 
@@ -97,6 +97,11 @@ body{
 @media only screen and (min-width: 450px){
     .menu{
         height: 50px;
+    }
+    .menu ul li{
+       
+        margin: 0 5%;
+        
     }
     .textarea{
         height: 75%;
