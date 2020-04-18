@@ -61,7 +61,7 @@ body{
 .menu{
     position: fixed;
     bottom: 0;
-    height: 8%;
+    height: 50px;
     width: 100%;
     background-color: var(--textareabg);
     
@@ -93,6 +93,8 @@ body{
 .switch{
     display:none
 }
+
+
 @media only screen and (max-width:350px){
     .menu ul li{
        

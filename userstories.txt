@@ -1,16 +1,16 @@
-O usuário pode escrever um documento em uma textarea;
-O usuário pode formatar o texto através de uma barra com as ferramentas;
-Cada ferramenta possui um atalho no teclado;
-O usuario pode salvar o documento em um arquivo de texto.
+O usuário pode escrever um documento em uma textarea; check
+O usuário pode formatar o texto através de uma barra com as ferramentas; check
+Cada ferramenta possui um atalho no teclado; 
+O usuario pode salvar o documento em um arquivo de texto. 
 O usuário pode excluir o documento através de um botão na janela.
-O usuário pode alternar entre tema light e dark.
+O usuário pode alternar entre tema light e dark. check
 
 
 
 
 A fazer 
-	Corrigir responsividade (altura) (elementos se unindo em dispositivos mais baixos);
-	Adicionar novas ferramentas;
-	Permitir tab;
-	voltar o focus pra textarea após clicar uma ferramenta;
-	Adicionar fontes e tamanhos;
+	Corrigir responsividade (altura) (elementos se unindo em dispositivos mais baixos); check
+	Adicionar novas ferramentas; check
+	Permitir tab; check
+	voltar o focus pra textarea após clicar uma ferramenta; check
+	
