@@ -66,7 +66,7 @@ function permiteTab(){
 
 function mudaTema(){
     let root =document.querySelector('body');
-    if(document.querySelector('.switch input').checked){
+    if(!document.querySelector('.switch input').checked){
     
     root.style.setProperty('--bgdk', '#d7d7d7' );
     root.style.setProperty('--textareabg', '#f6f6f6');
