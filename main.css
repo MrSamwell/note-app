@@ -225,7 +225,7 @@ body{
   
     display: inline-block;
     width: 60px;
-    height: 34px;
+    height: 36px;
   }
   
   /* Hide default HTML checkbox */
@@ -335,6 +335,17 @@ body{
         animation: 0.2s ease-out 0s 1 slideInFromRight;
         
     }
+    .slider{
+        border: 2px var(--bgdk) solid;
+    }
+    input:checked + .slider {
+        background-color: var(--bgdk);
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px var(--bgdk);
+      }
+      
 
 
 }
