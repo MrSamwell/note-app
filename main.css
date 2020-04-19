@@ -266,10 +266,10 @@ body{
   .slider:before {
    
     content: "";
-    height: 20px;
-    width: 20px;
+    height: 19px;
+    width: 19px;
     bottom: 1px;
-    left: 1px;
+    left: 2px;
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
@@ -284,9 +284,9 @@ body{
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(12px);
-    -ms-transform: translateX(12px);
-    transform: translateX(12px);
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
   }
   
   /* Rounded sliders */
