@@ -73,6 +73,21 @@ function mudaDisplay(){
     
 }
 
+function tiraDisplay(){
+    var menuop = document.getElementById('menuoptions');
+    if(this.menudisplay) {
+        menuop.classList.add('slideout');
+        setTimeout(function(){
+            menuop.style.display = 'none';
+            document.getElementById('configicon').style.display = 'block';
+            menuop.classList.remove('slideout');
+            this.menudisplay = !this.menudisplay;
+        }, 200);
+        
+       
+    }
+}
+
 function permiteTab(){
    /* if(event.keyCode == 9){
         event.preventDefault();
