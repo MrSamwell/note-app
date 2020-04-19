@@ -1,5 +1,7 @@
 var hlcolor = '#4db082';
 var menudisplay = false;
+
+
 function executaComando(){
    
     if(arguments.length == 1){
@@ -47,16 +49,28 @@ function trocaCorHl(a){
 
 function mudaDisplay(){
     var menuop = document.getElementById('menuoptions');
+    
     if(!this.menudisplay){
         menuop.style.display = 'block';
         document.getElementById('configicon').style.display = 'none';
         this.menudisplay = !this.menudisplay;
+       
     }
     else {
-        menuop.style.display = 'none';
-        document.getElementById('configicon').style.display = 'block';
-        this.menudisplay = !this.menudisplay;
+        menuop.classList.add('slideout');
+        setTimeout(function(){
+            menuop.style.display = 'none';
+            document.getElementById('configicon').style.display = 'block';
+            menuop.classList.remove('slideout');
+            this.menudisplay = !this.menudisplay;
+        }, 200);
+        
+       
     }
+
+    menuop.focus();
+
+    
 }
 
 function permiteTab(){
