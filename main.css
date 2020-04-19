@@ -42,8 +42,15 @@ body{
     position: absolute;
     right: 10px;
     top: 0px;
-    opacity: 0.5;
+    opacity: 1;
     
+    
+}
+.configicon svg:hover{
+  cursor: pointer;
+  transform: rotate(50deg);
+  transform-origin: center;
+  transition: 2.5s;
 }
 .textarea{
     padding: 20px;
@@ -194,6 +201,10 @@ body{
   transform: scale(1.05);
   cursor: pointer;
 }
+.menuoptions ul li svg{
+  fill: var(--fontcolor);
+  vertical-align: bottom;
+}
 
 .xis{
     position: absolute;
@@ -241,7 +252,7 @@ body{
     display: inline-block;
     width: 40px;
     height: 26px;
-    top: -10px;
+    top: -9px;
   }
   
   /* Hide default HTML checkbox */

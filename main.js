@@ -1,8 +1,9 @@
 var hlcolor = '#4db082';
 var menudisplay = false;
 
-function salvaTxt(){
+function copiarTxt(){
 
+   
 }
 
 function resetaTxt(){
