@@ -221,6 +221,9 @@ body{
 
 @media only screen and (min-width: 1000px){
     /* The switch - the box around the slider */
+    .slideout{
+      animation: 0.2s ease-out 0s 1 slideOut;
+    }
 .switch {
   
     display: inline-block;
@@ -362,9 +365,7 @@ body{
     }
 }
 
-.slideout{
-  animation: 0.2s ease-out 0s 1 slideOut;
-}
+
 @keyframes slideOut{
   0% {
     transform: translateX(0);
