@@ -1,7 +1,13 @@
 var hlcolor = '#4db082';
 var menudisplay = false;
 
+function salvaTxt(){
+    
+}
 
+function resetaTxt(){
+    document.getElementById('textarea').innerHTML = '';
+}
 function executaComando(){
    
     if(arguments.length == 1){
@@ -53,8 +59,7 @@ function mudaDisplay(){
     if(!this.menudisplay){
         menuop.style.display = 'block';
         document.getElementById('configicon').style.display = 'none';
-        this.menudisplay = !this.menudisplay;
-       
+        this.menudisplay = !this.menudisplay;   
     }
     else {
         menuop.classList.add('slideout');
@@ -64,13 +69,8 @@ function mudaDisplay(){
             menuop.classList.remove('slideout');
             this.menudisplay = !this.menudisplay;
         }, 200);
-        
-       
     }
-
     menuop.focus();
-
-    
 }
 
 function tiraDisplay(){
@@ -83,27 +83,16 @@ function tiraDisplay(){
             menuop.classList.remove('slideout');
             this.menudisplay = !this.menudisplay;
         }, 200);
-        
-       
     }
 }
 
 function permiteTab(){
-   /* if(event.keyCode == 9){
-        event.preventDefault();
-        var range = window.getSelection().getRangeAt(0);
- 
-        var tabNode = document.createTextNode("\u00a0\u00a0\u00a0\u00a0");
-        range.insertNode(tabNode);
- 
-        range.setStartAfter(tabNode);
-        range.setEndAfter(tabNode);
-    }
-    */
+    
    if(event.keyCode == 9){
        event.preventDefault();
        document.execCommand('indent', false, null);
    }
+
 }
 
 function mudaTema(){
