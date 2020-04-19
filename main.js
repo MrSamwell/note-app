@@ -1,5 +1,5 @@
 var hlcolor = '#4db082';
-
+var menudisplay = false;
 function executaComando(){
    
     if(arguments.length == 1){
@@ -27,7 +27,7 @@ function executaComando(){
 }
 
 function trocaCorHl(a){
-    
+
             if (a == 'HiliteColor' && this.hlcolor == '#4db082'){
                 this.hlcolor = 'transparent';
                 
@@ -45,6 +45,19 @@ function trocaCorHl(a){
           
 }
 
+function mudaDisplay(){
+    var menuop = document.getElementById('menuoptions');
+    if(!this.menudisplay){
+        menuop.style.display = 'block';
+        document.getElementById('configicon').style.display = 'none';
+        this.menudisplay = !this.menudisplay;
+    }
+    else {
+        menuop.style.display = 'none';
+        document.getElementById('configicon').style.display = 'block';
+        this.menudisplay = !this.menudisplay;
+    }
+}
 
 function permiteTab(){
    /* if(event.keyCode == 9){
