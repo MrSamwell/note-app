@@ -331,6 +331,7 @@ body{
         margin: 0px;
         background-color: var(--textareabg);
         border-radius: 10px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
         animation: 0.2s ease-out 0s 1 slideInFromRight;
         
     }
