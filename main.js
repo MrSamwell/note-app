@@ -2,11 +2,12 @@ var hlcolor = '#4db082';
 var menudisplay = false;
 
 function salvaTxt(){
-    
+
 }
 
 function resetaTxt(){
     document.getElementById('textarea').innerHTML = '';
+    this.tiraDisplay();
 }
 function executaComando(){
    
@@ -68,7 +69,7 @@ function mudaDisplay(){
             document.getElementById('configicon').style.display = 'block';
             menuop.classList.remove('slideout');
             this.menudisplay = !this.menudisplay;
-        }, 200);
+        }, 190);
     }
     menuop.focus();
 }
