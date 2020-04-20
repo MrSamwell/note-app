@@ -6,12 +6,28 @@ const element = document.getElementById('textarea');
  
 
 window.onload = function loadLocal(){
-    document.getElementById('textarea').innerHTML = localStorage.getItem('textarea');   
+    document.getElementById('textarea').innerHTML = localStorage.getItem('textarea');
+    
+    if( localStorage.getItem('darkmode') === null){
+        localStorage.setItem('darkmode', "true");
+    }
+    else {
+        if(localStorage.getItem('darkmode') == "true"){
+            document.getElementById("checktema").checked = true;
+        }
+        else {
+            document.getElementById("checktema").checked =false;
+        }
+        
+      
+    }
+    mudaTema();
+
 }
 
 function saveLocal() {
     var content = document.getElementById('textarea').innerHTML;
-    localStorage.setItem('textarea', content)
+    localStorage.setItem('textarea', content);
 }
 function copiarTxt(){
 //copia o conteúdo da textarea para a clipboard.
@@ -49,11 +65,13 @@ function trocaCorHl(a){
 }
 
 function mudaDisplay(){
+    
     var menuop = document.getElementById('menuoptions'); 
     if(!this.menudisplay){
         menuop.style.display = 'block';
         document.getElementById('configicon').style.display = 'none';
         this.menudisplay = !this.menudisplay;   
+        
     }
     else {
         menuop.classList.add('slideout');
@@ -65,6 +83,7 @@ function mudaDisplay(){
         }, 190);
     }
     menuop.focus();
+    
 }
 function tiraDisplay(){
     var menuop = document.getElementById('menuoptions');
@@ -86,6 +105,7 @@ function permiteTab(){
    }
 }
 function mudaTema(){
+    localStorage.setItem('darkmode', document.getElementById("checktema").checked);
     let root =document.querySelector('body');
     if(!document.querySelector('.switch input').checked){
     
