@@ -16,7 +16,6 @@ function saveLocal() {
 function copiarTxt(){
 //copia o conteúdo da textarea para a clipboard.
 }
-
 function resetaTxt(){
     document.getElementById('textarea').innerHTML = '';
     this.tiraDisplay();
@@ -28,13 +27,9 @@ function executaComando(){
 }
     if(arguments.length == 3){
         document.execCommand(arguments[0], arguments[1], arguments[2]);
-
-
         let a = arguments[0];
         trocaCorHl(a);
-        
     }
-
     let p = document.getElementById('textarea');
     let s = window.getSelection();
     let r = document.createRange();
@@ -42,33 +37,19 @@ function executaComando(){
     r.setEnd(p, p.childElementCount);
     s.removeAllRanges();
     s.addRange(r);
-    
-    
-    
 }
-
 function trocaCorHl(a){
 
             if (a == 'HiliteColor' && this.hlcolor == '#4db082'){
-                this.hlcolor = 'transparent';
-                
-                
-                
+                this.hlcolor = 'transparent';       
             } else 
             if(a == 'HiliteColor' && this.hlcolor == 'transparent'){
-                this.hlcolor = '#4db082';
-               
-                
-            }
-
-          
-
-          
+                this.hlcolor = '#4db082';        
+            }     
 }
 
 function mudaDisplay(){
-    var menuop = document.getElementById('menuoptions');
-    
+    var menuop = document.getElementById('menuoptions'); 
     if(!this.menudisplay){
         menuop.style.display = 'block';
         document.getElementById('configicon').style.display = 'none';
@@ -85,7 +66,6 @@ function mudaDisplay(){
     }
     menuop.focus();
 }
-
 function tiraDisplay(){
     var menuop = document.getElementById('menuoptions');
     if(this.menudisplay) {
@@ -98,16 +78,13 @@ function tiraDisplay(){
         }, 200);
     }
 }
-
 function permiteTab(){
     
    if(event.keyCode == 9){
        event.preventDefault();
        document.execCommand('indent', false, null);
    }
-
 }
-
 function mudaTema(){
     let root =document.querySelector('body');
     if(!document.querySelector('.switch input').checked){
