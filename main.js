@@ -4,6 +4,24 @@ const element = document.getElementById('textarea');
     element.addEventListener('DOMSubtreeModified', saveLocal);
     
  
+    function copiarTxt(el) {
+        let p = document.getElementById('textarea');
+        let s = window.getSelection();
+        let r = document.createRange();
+        r.setStart(p, p.childElementCount);
+        r.setEnd(p, p.childElementCount);
+        s.removeAllRanges();
+        s.addRange(r);
+      document.execCommand('selectAll', false, null);
+      document.execCommand('copy');
+      s.removeAllRanges();
+      s.addRange(r);
+      let elo = document.querySelector( ':focus' );
+      if( elo ) elo.blur();
+      alert("Texto copiado para a clipboard.")
+    }
+    
+ 
 
 window.onload = function loadLocal(){
     document.getElementById('textarea').innerHTML = localStorage.getItem('textarea');
@@ -29,9 +47,6 @@ window.onload = function loadLocal(){
 function saveLocal() {
     var content = document.getElementById('textarea').innerHTML;
     localStorage.setItem('textarea', content);
-}
-function copiarTxt(){
-//copia o conteúdo da textarea para a clipboard.
 }
 function resetaTxt(){
     document.getElementById('textarea').innerHTML = '';

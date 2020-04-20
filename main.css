@@ -7,6 +7,11 @@ html{
     box-sizing: border-box;
 }
 
+a{
+  text-emphasis: none;
+  color: var(--fontcolor);
+  text-decoration: none;
+}
 html,body{
     padding: 0;
     margin: 0;
