@@ -6,7 +6,7 @@ const element = document.getElementById('textarea');
  
 
 window.onload = function loadLocal(){
-        document.getElementById('textarea').innerHTML = localStorage.getItem('textarea');   
+    document.getElementById('textarea').innerHTML = localStorage.getItem('textarea');   
 }
 
 function saveLocal() {
@@ -14,8 +14,7 @@ function saveLocal() {
     localStorage.setItem('textarea', content)
 }
 function copiarTxt(){
-
-   
+//copia o conteúdo da textarea para a clipboard.
 }
 
 function resetaTxt(){
