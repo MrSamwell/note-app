@@ -1,6 +1,18 @@
 var hlcolor = '#4db082';
 var menudisplay = false;
+const element = document.getElementById('textarea');
+    element.addEventListener('DOMSubtreeModified', saveLocal);
+    
+ 
 
+window.onload = function loadLocal(){
+        document.getElementById('textarea').innerHTML = localStorage.getItem('textarea');   
+}
+
+function saveLocal() {
+    var content = document.getElementById('textarea').innerHTML;
+    localStorage.setItem('textarea', content)
+}
 function copiarTxt(){
 
    
