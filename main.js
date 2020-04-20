@@ -10,6 +10,7 @@ window.onload = function loadLocal(){
     
     if( localStorage.getItem('darkmode') === null){
         localStorage.setItem('darkmode', "true");
+        document.getElementById("checktema").checked = true;
     }
     else {
         if(localStorage.getItem('darkmode') == "true"){
