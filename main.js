@@ -3,7 +3,16 @@ var menudisplay = false;
 const element = document.getElementById('textarea');
     element.addEventListener('DOMSubtreeModified', saveLocal);
     
- 
+    function addFocusOnEnd(){
+        let p = document.getElementById('textarea');
+        let s = window.getSelection();
+        let r = document.createRange();
+        r.setStart(p, p.childElementCount);
+        r.setEnd(p, p.childElementCount);
+        s.removeAllRanges();
+        s.addRange(r);
+    }
+    
     function copiarTxt(el) {
         let p = document.getElementById('textarea');
         let s = window.getSelection();
@@ -62,13 +71,7 @@ function executaComando(){
         let a = arguments[0];
         trocaCorHl(a);
     }
-    let p = document.getElementById('textarea');
-    let s = window.getSelection();
-    let r = document.createRange();
-    r.setStart(p, p.childElementCount);
-    r.setEnd(p, p.childElementCount);
-    s.removeAllRanges();
-    s.addRange(r);
+   addFocusOnEnd()
 }
 function trocaCorHl(a){
 
